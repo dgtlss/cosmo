@@ -1,0 +1,45 @@
+{
+    "name": "dgtlss/cosmo",
+    "description": "",
+    "keywords": ["laravel", "error notifier", "bug tracking", "error reporting"],
+    "version": "0.1.0",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nathan Langer",
+            "email": "nathanlanger@googlemail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "nunomaduro/laravel-desktop-notifier": "^2.5",
+        "daftspunk/laravel-config-writer": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dgtlss\\Cosmo\\": "src/"
+        },
+        "files": [
+			"src/helpers.php"
+		],
+        "classmap": [
+            "src/Contollers",
+            "src/Models"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "branch-alias": {
+            "dev-master": "4.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Dgtlss\\Cosmo\\ServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "laravel/framework": "^9.0.0"
+    }
+}
