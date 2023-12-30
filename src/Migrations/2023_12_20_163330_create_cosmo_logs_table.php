@@ -19,6 +19,10 @@ class CreateCosmoLogsTable extends Migration
             $table->string('type')->nullable();
             $table->json('exception')->nullable();
             $table->integer('user_id')->nullable();
+            $table->string('flag')->nullable();
+            $table->string('status')->nullable();
+            $table->string('urgency')->nullable();
+            $table->timestamps();
         });
     }
 

@@ -44,8 +44,8 @@ class CosmoController extends Controller
     public function index()
     {
         $this->checkGateAccess(); // Check if user is allowed to view Cosmo
-        $latestError = CosmoError::latestError();
-        return view('cosmo::dashboard.index',compact('latestError'));
+        $errors = CosmoError::orderBy('created_at','desc')->paginate(30);
+        return view('cosmo::dashboard.index',compact('errors'));
     }
 
     public function show($uid)

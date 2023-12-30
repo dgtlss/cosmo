@@ -64,7 +64,7 @@ Class PruneCosmo extends Command
             $errors->each(function ($error) {
                 $error->delete();
             });
-            $this->info('Cosmo errors pruned successfully!');
+            $this->info(number_format($totalErrors). ' Cosmo errors pruned successfully!');
         }else{
             $this->info('No Cosmo errors to prune.');
         }
